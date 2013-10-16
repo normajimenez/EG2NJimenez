@@ -68,15 +68,24 @@ public class Fraccion {
     }
     
 	public boolean isPropia() {
-		return true;
+		if(this.numerador < this.denominador){
+			return true;
+		} else return false;
+		
 	}
 
 	public boolean isImpropia() {
-		return true;
+		if(this.isPropia()){
+			return false;
+		} return true;
 	}
 
 	public boolean equivalente(Fraccion fraccion) {
-		return true;
+		
+		if(fraccion.getNumerador() * this.denominador == fraccion.getDenominador() * this.numerador){
+			return true;
+		} else return false;
+		
 	}
 
 }
