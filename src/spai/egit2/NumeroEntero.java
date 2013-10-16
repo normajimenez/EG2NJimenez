@@ -33,7 +33,7 @@ public class NumeroEntero {
     }
 
 	public void Triplicar() {
-		//empty method stub		
+		this.setValor(this.valor * 3);		
 	}
 
 }
