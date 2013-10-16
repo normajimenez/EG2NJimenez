@@ -66,5 +66,17 @@ public class Fraccion {
     public double decimal() {
         return (double) numerador / denominador;
     }
+    
+	public boolean isPropia() {
+		return true;
+	}
+
+	public boolean isImpropia() {
+		return true;
+	}
+
+	public boolean equivalente(Fraccion fraccion) {
+		return true;
+	}
 
 }
