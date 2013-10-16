@@ -31,4 +31,8 @@ public class NumeroEntero {
         this.valor--;
     }
 
+	public void Triplicar() {
+		//empty method stub		
+	}
+
 }
