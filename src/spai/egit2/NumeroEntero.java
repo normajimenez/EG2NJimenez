@@ -1,3 +1,4 @@
+
 package spai.egit2;
 
 public class NumeroEntero {
@@ -30,5 +31,9 @@ public class NumeroEntero {
     public void decrementar() {
         this.valor--;
     }
+
+	public void Triplicar() {
+		//empty method stub		
+	}
 
 }

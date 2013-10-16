@@ -1,3 +1,4 @@
+
 package spai.egit2;
 
 import java.util.ArrayList;
@@ -33,5 +34,13 @@ public class ColeccionDecimales {
         }
         return mayor;
     }
-
+    
+    public double menor() {
+        double menor = Double.POSITIVE_INFINITY;
+        for (double item : this.coleccion) {
+            if (item < menor)
+                menor = item;
+        }
+        return menor;
+    }
 }

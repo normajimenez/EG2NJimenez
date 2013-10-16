@@ -1,3 +1,4 @@
+
 package spai.egit2.test;
 
 import static org.junit.Assert.*;
@@ -44,5 +45,25 @@ public class FraccionTest {
     public void testDecimal() {
         assertEquals(2.0/3.0, fraccion.decimal(), 1e-10);
     }
+    
+	@Test
+	public void testIsPropia() {
+		this.fraccion.setNumerador(1);
+		this.fraccion.setDenominador(3);
+		assertTrue(this.fraccion.isPropia());
+	}
+
+	@Test
+	public void testIsImpropia() {
+		this.fraccion.setNumerador(5);
+		this.fraccion.setDenominador(3);
+		assertTrue(this.fraccion.isImpropia());
+	}
+
+	@Test
+	public void testEquivalente() {
+		Fraccion f1 = new Fraccion(4, 6);
+		assertTrue(this.fraccion.equivalente(f1));
+	}
 
 }

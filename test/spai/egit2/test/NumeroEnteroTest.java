@@ -1,3 +1,4 @@
+
 package spai.egit2.test;
 
 import static org.junit.Assert.assertEquals;
@@ -47,5 +48,12 @@ public class NumeroEnteroTest {
         this.numero.decrementar();
         assertEquals(-1, numero.getValor());
     }
+    
+    @Test
+    public void testTriplicar() {
+    	this.numero.Triplicar();
+    	assertEquals(300, numero.getValor());
+    }
 
 }
+
