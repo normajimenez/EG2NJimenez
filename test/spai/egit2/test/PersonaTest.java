@@ -16,6 +16,7 @@ public class PersonaTest {
     }
 
     @Test
+    
     public void testGetNombre() {
         assertEquals("Ana", this.persona.getNombre());
     }

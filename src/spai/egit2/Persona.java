@@ -2,15 +2,15 @@ package spai.egit2;
 
 public class Persona {
     private String nombre;
-
     private String apellido;
+    private String apellidoMaterno;
 
     private String format(String cadena) {
         cadena = cadena.trim();
         return cadena.substring(0, 1).toUpperCase() + cadena.substring(1).toLowerCase();
     }
 
-    public Persona(String nombre, String apellido) {
+    public Persona(String nombre, String apellido, String apellidoM) {
         this.setNombre(nombre);
         this.setApellido(apellido);
     }
@@ -43,7 +43,7 @@ public class Persona {
     	return null;
     }
     
-    public void setApellidoMaterno(String apellidoMaterno){
+    public void setApellidoMaterno(String apellidoM){
     }
     
 }
