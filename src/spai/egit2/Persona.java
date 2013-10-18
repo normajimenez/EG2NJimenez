@@ -13,6 +13,7 @@ public class Persona {
     public Persona(String nombre, String apellido, String apellidoM) {
         this.setNombre(nombre);
         this.setApellido(apellido);
+        this.setApellidoMaterno(apellidoM);
     }
 
     public String getNombre() {
@@ -32,7 +33,7 @@ public class Persona {
     }
 
     public String nombreCompleto() {
-        return this.nombre + " " + this.apellido;
+        return this.nombre + " " + this.apellido + " " + this.apellidoMaterno;
     }
 
     public String inicial() {
@@ -40,10 +41,11 @@ public class Persona {
     }
     
     public String getApellidoMaterno(){
-    	return null;
+    	return apellidoMaterno;
     }
     
     public void setApellidoMaterno(String apellidoM){
+    	this.apellidoMaterno = this.format(apellidoM);
     }
     
 }
