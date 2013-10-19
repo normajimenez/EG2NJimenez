@@ -1,1 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<project name="checkstyle" default="main" basedir=".">
+	<!-- Variables globales -->
+	<property name="src" location="src" />
+	<property name="checkstyle.lib" location="lib/checkstyle-5.6-all.jar" />
+	<property name="checkstyle.checks" location="MIW_checkstyle.xml" />
+	<property name="checkstyle.report" location="reports.xml" />
+	<!-- Ejecutar checkstyle, salida en fichero XML -->
+	<target name="checkstyle">
+		<taskdef resource="checkstyletask.properties" classpath="${checkstyle.lib}" />
+		<checkstyle config="${checkstyle.checks}" failureProperty="checkstyle.failure"
+			failOnViolation="false">
+			<formatter type="xml" tofile="${checkstyle.report}" />
+			<fileset dir="${src}" includes="**/*.java" />
+		</checkstyle>
+	</target>
+	<!-- Principal... -->
+	<target name="main" depends="checkstyle" description="Checkstyle">
+		<echo message="testeando con checkstyle..." />
+	</target>
+</project>
